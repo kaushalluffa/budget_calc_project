@@ -1,19 +1,20 @@
 import React from 'react'
 import './expenseitem.css'
 import ExpenseDate from './ExpenseDate'
+import Card from './Card'
 
-function ExpenseItem({title, amount, date}) {
+function ExpenseItem(props) {
 
     
     
   return (
-      <div className="expense-item">
-          <ExpenseDate date={date} />
+      <Card className="expense-item" >
+          <ExpenseDate date={props.date} />
           <div className="expense-item__description">
-              <h2>{title}</h2>
-              <div className="expense-item__price">${amount}</div>
+              <h2>{props.title}</h2>
+              <div className="expense-item__price">${props.amount}</div>
           </div>
-      </div>
+      </Card>
   )
 }
 
